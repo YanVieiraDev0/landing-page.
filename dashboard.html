@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - DevFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Dashboard 🚀</h1>
+  <p>Bem-vindo ao seu painel</p>
+
+  <a href="index.html">Voltar</a>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - DevFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2>DevFlow</h2>
+    <a href="index.html">Voltar</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="dash-header">
+    <h1>Seu Dashboard 🚀</h1>
+    <p>Gerencie seus projetos como um dev profissional</p>
+  </header>
+
+  <!-- CARDS -->
+  <section class="cards">
+
+    <div class="card">
+      <h3>Landing Page</h3>
+      <p>Status: Em andamento</p>
+    </div>
+
+    <div class="card">
+      <h3>Portfólio</h3>
+      <p>Status: Concluído</p>
+    </div>
+
+  <div class="card" onclick="mudarStatus(this)">
+  <h3>Landing Page</h3>
+  <p class="status">Status: Em andamento</p>
+</div>
+
+<div class="card" onclick="mudarStatus(this)">
+  <h3>Portfólio</h3>
+  <p class="status">Status: Concluído</p>
+</div>
+
+<div class="card" onclick="mudarStatus(this)">
+  <h3>App React</h3>
+  <p class="status">Status: Em andamento</p>
+</div>
+
+  </section>
+<script>
+  function mudarStatus(card) {
+    const status = card.querySelector(".status");
+    
+    if (status.innerText.includes("Em andamento")) {
+      status.innerText = "Status: Concluído";
+      card.style.borderColor = "limegreen";
+    } else {
+      status.innerText = "Status: Em andamento";
+      card.style.borderColor = "orange";
+    }
+  }
+</script>
+
+</body>
+</html>
